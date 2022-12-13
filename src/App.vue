@@ -1,18 +1,26 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import YummyMeal from "./components/YummyMeal.vue";
+import {provide, ref} from "vue";
+import Home from "./views/Home.vue";
 
-const addToCart = name => console.log('addToCart.name', name);
+// const addToCart = name => console.log('addToCart.name', name);
+// const refToInject = ref('$$--');
+
+// provide('currencySymbol', refToInject);
 
 </script>
 
 <template>
-  <YummyMeal
-      name="Bandeja Paisa"
-      :price="Math.trunc(30)"
-      @addToCart="addToCart"
-  ></YummyMeal>
-  <HelloWorld msg="Vite + Vue"/>
+  <Home></Home>
+
+<!--  <YummyMeal-->
+<!--      name="Bandeja Paisa"-->
+<!--      :price="Math.trunc(30)"-->
+<!--      @addToCart="addToCart"-->
+<!--  ></YummyMeal>-->
+<!--  <HelloWorld msg="Vite + Vue"/>-->
+
 </template>
 
 <style scoped>
